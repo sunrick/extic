@@ -18,7 +18,7 @@ defmodule Tic do
     play(@board, "X")
   end
   def play(board, player) when is_list(board) do
-    board = display_board(board)
+    display_board(board)
     pick = get_pick(player)
     board = update_board(board, pick, player)
     case [win?(board), draw?(board)] do
@@ -78,7 +78,6 @@ defmodule Tic do
     |> Enum.chunk(3)
     |> Enum.map(fn (chunk) -> Enum.join(chunk, ",") |> IO.puts end)
     IO.puts ""
-    board
   end
 
   def switch_player(player) do
