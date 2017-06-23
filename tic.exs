@@ -57,7 +57,7 @@ defmodule Tic do
   end
 
   def win?(board) do
-     Enum.any? @wins, fn (combo) ->
+    Enum.any? @wins, fn (combo) ->
       [a, b, c] = combo
       case [Enum.at(board, a),Enum.at(board, b),Enum.at(board, c)] do
         [x,x,x] -> # same value
