@@ -65,14 +65,14 @@ defmodule Extic.Board do
   end
 
   def handle_call(:win?, _from, board) do
-    {:reply, _pwin?(board), board}
+    {:reply, _win?(board), board}
   end
 
   def handle_call(:reset, _from, _board) do
     {:reply, :ok, @board}
   end
 
-  def _pwin?(board) do
+  defp _win?(board) do
     Enum.any? @wins, fn (combo) ->
       [a, b, c] = combo
       case [Enum.at(board, a),Enum.at(board, b),Enum.at(board, c)] do
