@@ -1,21 +1,11 @@
 # Extic
 
-**TODO: Add description**
+Terminal tic tac toe in Elixir.
 
-## Installation
+To play, just run `mix`.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `extic` to your list of dependencies in `mix.exs`:
+## Notes
 
-```elixir
-def deps do
-  [
-    {:extic, "~> 0.1.0"}
-  ]
-end
-```
+Originally had the game working recursively without GensServer implementation for the Board.
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/extic](https://hexdocs.pm/extic).
-
+Decided to try it out using a GenServer for the board for practice!

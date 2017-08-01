@@ -56,3 +56,5 @@ defmodule Extic.Tic do
   end
 
 end
+
+Extic.Tic.play()
