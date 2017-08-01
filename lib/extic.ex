@@ -42,22 +42,6 @@ defmodule Extic.Tic do
     end
   end
 
-  def win?(board) do
-    Enum.any? @wins, fn (combo) ->
-      [a, b, c] = combo
-      case [Enum.at(board, a),Enum.at(board, b),Enum.at(board, c)] do
-        [x,x,x] -> # same value
-          true
-        _ ->
-          false
-      end
-    end
-  end
-
-  def draw?(board) do
-    Enum.all?(board, fn (x) -> Kernel.is_bitstring(x) end)
-  end
-
   def display_board(board) do
     board = Board.state(board)
     IO.puts ""
